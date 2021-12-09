@@ -52,6 +52,12 @@ function SignUp({ setUser }) {
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
+        <input type="text" name="first-name"  placeholder="First Name" />
+        <input type="text" name="last-name"  placeholder="Last Name" />
+        <input type="text" name="nickname"  placeholder="Nickname" />
+        <input type="text" name="email"  placeholder="Email" />
+        <p>If you don't already know your Jungian Hero Archetype, take the quiz here</p>
+        <input type="text" name="email"  placeholder="Hero Archetype" />
         <button type="submit">Sign Up</button>
       </form>
     </div>

@@ -1,6 +1,6 @@
 function UserProfile({ user }) {
     return (
-        <p>This is the user profile Component.</p>
+        <p>Welcome to your user profile, {user.first_name}</p>
     )
 }
 

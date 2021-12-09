@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   post "/signup", to: "users#create"
 
+  post "/newJournalEntry", to: "journals#create"
+
   resources :users
 end

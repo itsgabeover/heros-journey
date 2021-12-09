@@ -20,7 +20,7 @@ function Login({ setUser }) {
         r.json().then((user) => setUser(user));
       }
     });
-    navigate('/');
+    navigate('/me');
   }
 
   return (
