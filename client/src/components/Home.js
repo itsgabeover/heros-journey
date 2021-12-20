@@ -27,9 +27,8 @@ function Home({ user }) {
     .then(data => console.log(data))
     e.target.reset()
   }
-    if (user) {
       return (
-      <>
+      <div className="wrap">
         <div>
           <div>
             <iframe 
@@ -66,13 +65,8 @@ function Home({ user }) {
           <input type="text" name="body" className="journal-entry-text" autoComplete="off" placeholder="Begin your story..." />
           <button className="add-journal-button">Save journal</button>
         </form>
-      </>
+      </div>
       )
-    } else {
-      return (
-      <h3>Please signup or log in</h3> 
-    )
     }
-  }
 
   export default Home;

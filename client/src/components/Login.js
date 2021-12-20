@@ -26,7 +26,7 @@ function Login({ setUser, setJournals }) {
         setJournals(journals)
         console.log(journals)
       })
-    navigate('/me');
+    navigate('/');
 
 
   }
