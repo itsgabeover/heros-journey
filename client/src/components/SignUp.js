@@ -4,6 +4,11 @@ function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [archetype, setArchetype] = useState("")
+
+  function handleArchetypeInput(e){
+    setArchetype(e.value)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -56,8 +61,21 @@ function SignUp({ setUser }) {
         <input type="text" name="last-name"  placeholder="Last Name" />
         <input type="text" name="nickname"  placeholder="Nickname" />
         <input type="text" name="email"  placeholder="Email" />
-        <p>If you don't already know your Jungian Hero Archetype, take the quiz here</p>
-        <input type="text" name="email"  placeholder="Hero Archetype" />
+        <p>If you don't already know your Hero Archetype, take the quiz</p><a href="https://archetypes.jilecek.cz/" target="_blank"> here.</a>
+        <select name="archetype"  onChange={handleArchetypeInput}>
+            <option value="Seeker">Seeker</option>
+            <option value="Innocent">Innocent</option>
+            <option value="Orphan">Orphan</option>
+            <option value="Fool (Jester)">Fool (Jester)</option>
+            <option value="Sage (Senex)">Sage</option>
+            <option value="King">King</option>
+            <option value="Creator">Creator</option>
+            <option value="Rebel">Rebel</option>
+            <option value="Magician">Magician</option>
+            <option value="Caregiver">Caregiver</option>
+            <option value="Love">Lover</option>
+            <option value="Warrior">Warrior</option>
+        </select>
         <button type="submit">Sign Up</button>
       </form>
     </div>

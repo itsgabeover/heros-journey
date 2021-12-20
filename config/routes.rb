@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :events
   resources :journals
+  resources :users
+
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/me", to: "sessions#show"
@@ -9,5 +11,6 @@ Rails.application.routes.draw do
 
   post "/newJournalEntry", to: "journals#create"
 
-  resources :users
+  get "/myJournals", to: "journals#my_journals"
+  
 end

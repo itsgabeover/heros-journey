@@ -1,5 +1,9 @@
 # README
 
+
+I WANT TO MODEL MY STUFF AFTER THIS WEBSITE IT LOOKS SO COOL!
+http://mammothmedia.tv/about/
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo from "../logo.png";
 
 function Home({ user }) {
 
@@ -30,6 +30,17 @@ function Home({ user }) {
     if (user) {
       return (
       <>
+        <div>
+          <div>
+            <iframe 
+            src="https://embed.ted.com/talks/matthew_winkler_what_makes_a_hero" 
+            width="854" height="480" 
+            frameBorder="0" 
+            scrolling="no" 
+            allowFullScreen>
+            </iframe>
+          </div>
+        </div>
         <form onSubmit={handleSubmit} className="add-journal-form">
           <label>Title </label>
           <input type="text" name="title" className="add-event-form-input" placeholder="Name..." />
@@ -52,7 +63,7 @@ function Home({ user }) {
             <option value="Master of the Two Worlds">Master of the Two Worlds</option>
             <option value="Freedom to Live">Freedom to Live</option>
           </select>
-          <input type="text" name="body" className="add-event-form-input" placeholder="Begin your story..." />
+          <input type="text" name="body" className="journal-entry-text" autoComplete="off" placeholder="Begin your story..." />
           <button className="add-journal-button">Save journal</button>
         </form>
       </>

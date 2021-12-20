@@ -6,6 +6,11 @@ class JournalsController < ApplicationController
     # def show
     #     render json: find_user, serializer: JournalSerializer, status: :ok
     # end
+
+    def my_journals
+        current_user = User.find(session[:user_id])
+        render json: current_user.journals, status: :ok
+    end
     
     def create
         new_entry = Journal.create!(journal_params)

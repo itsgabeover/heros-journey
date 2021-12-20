@@ -1,1 +1,48 @@
+body {
+  background-color: white;
+}
 
+div div {
+  margin: 0;
+  color: black;
+  background-color: white;
+  padding: 1px;
+  font-family: Arial;
+  height: 200px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #fbf5ea;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+img {
+  height: 35%;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
