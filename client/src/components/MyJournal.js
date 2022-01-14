@@ -1,7 +1,9 @@
 
 function MyJournal() {
   return (
-    <p>Here is my journal page</p>
+    <div className="content">
+      <p>Here is my journal page</p>
+    </div>
   )
 }
 

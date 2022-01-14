@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.png";
+import Header from "./Header";
 
 function Home({ user }) {
-
   function handleSubmit(e) {
     let title = e.target.title.value
     let body = e.target.body.value
@@ -28,17 +28,15 @@ function Home({ user }) {
     e.target.reset()
   }
       return (
-      <div className="wrap">
-        <div>
-          <div>
-            <iframe 
-            src="https://embed.ted.com/talks/matthew_winkler_what_makes_a_hero" 
-            width="854" height="480" 
-            frameBorder="0" 
-            scrolling="no" 
-            allowFullScreen>
-            </iframe>
-          </div>
+      <div className="content-wrap">
+        <Header user={user.first_name}/>
+        <div className="ted-video">
+          <iframe 
+              src="https://embed.ted.com/talks/matthew_winkler_what_makes_a_hero" 
+              frameBorder="0" 
+              scrolling="no" 
+              allowFullScreen>
+          </iframe>
         </div>
         <form onSubmit={handleSubmit} className="add-journal-form">
           <label>Title </label>

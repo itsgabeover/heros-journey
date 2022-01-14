@@ -27,13 +27,11 @@ function Login({ setUser, setJournals }) {
         console.log(journals)
       })
     navigate('/');
-
-
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="content">
+      <form className="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label htmlFor="username">Username</label>
         <input

@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../logo.png"
-
+import logoMovie from "../logoMovie.mp4"
+import ReactPlayer from 'react-player'
 
 function NavBar({ user, setUser, setJournals }) {
   const navigate = useNavigate()
@@ -19,39 +20,48 @@ function NavBar({ user, setUser, setJournals }) {
   }
 
   return (
-    <nav>
+    <>
         {user ? (
-          <nav className="web-nav">
-            
-            <ul className="menu">
-              <li><Link to="/"><img className="logo" src={logo} alt="logo"/></Link></li>
-              <li><Link to="/" className="item">Home</Link></li>
-              <li><Link to="/" className="item">12 Stages of the Hero's Journey</Link></li>
-              <li><Link to="/" className="item">Jungian Archetypes</Link></li>
-              <li><Link to="/me" className="item">My Journal</Link></li>
-              <li><Link to="/me" className="item">My Profile</Link></li>
-              <li><Link to="/me" className="item">Community</Link></li>
-              <li><button className="item" onClick={handleLogoutClick}>Logout</button></li>
-            </ul>
-          </nav>
+          <div className="sidebar">
+            <ReactPlayer className='react-player'
+                url={logoMovie}
+                width='100%'
+                height='200px'
+                playing='true'
+                volume='0'
+                muted='true'
+            /> 
+            <a className="item" href="/">Home</a>
+            <a className="item" href="/signup">Signup</a>
+            <a className="item" href="/login">Login</a>
+            <a className="item" href="/login">The Hero's Journey</a>
+            <a className="item" href="/login">Jungian Archetypes</a>
+            <a className="item" href="/login">Community</a>
+            <a className="item" href="/">My Journal</a>
+            <a className="item" href="/me">My Profile</a>
+          </div>
         ) : (
-          <nav className="webnav">
-            <Link to="/"><img className="logo" src={logo} alt="logo"/></Link>
-            <ul>
-              <li><Link to="/signup">Signup</Link></li>
-              <li><Link to="/login">Login</Link></li>
-            </ul>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/">12 Stages of the Hero's Journey</Link></li>
-              <li><Link to="/">Jungian Archetypes</Link></li>
-              <li><Link to="/me">My Journal</Link></li>
-              <li><Link to="/me">My Profile</Link></li>
-              <li><Link to="/me">Community</Link></li>
-            </ul>
-          </nav>
+          <div className="sidebar">
+              <ReactPlayer className='react-player'
+                url={logoMovie}
+                width='100%'
+                height='200px'
+                playing='true'
+                volume='0'
+                muted='true'
+              />    
+              <a className="item" href="/">Home</a>
+              <a className="item" href="/signup">Signup</a>
+              <a className="item" href="/login">Login</a>
+              <a className="item" href="/login">The Hero's Journey</a>
+              <a className="item" href="/login">Jungian Archetypes</a>
+              <a className="item" href="/login">Community</a>
+              <a className="item" href="/login">Community</a>
+              <a className="item" href="/login">Community</a>
+              <a className="item" href="/login">Community</a> 
+            </div>
         )}
-    </nav>
+    </>
   );
 }
 

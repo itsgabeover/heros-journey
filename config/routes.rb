@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   post "/newJournalEntry", to: "journals#create"
 
   get "/myJournals", to: "journals#my_journals"
+
+  patch "/editprofile", to "users#update"
   
 end

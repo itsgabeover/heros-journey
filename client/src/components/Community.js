@@ -1,7 +1,9 @@
 
 function Community() {
     return (
-      <p>Here is my community page</p>
+      <div className="content">
+        <p>Here is my community page</p>
+      </div>
     )
   }
   
