@@ -3,7 +3,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     margin: 0;
-    background-color: #fbfea5;
+    background-color: #fbf4e9;
 }
 .sidebar {
   width: 20%;
@@ -20,6 +20,8 @@ body {
   border:1px solid black;
   border-radius: 5px;
   text-align: center;
+  margin: 10px;
+  margin-top: 5px;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -29,10 +31,12 @@ body {
 .sidebar a.active {
   /*some color goes here
   */
+  color: white;
 }
 
 .sidebar a:hover:not(.active) {
   background-color: #896308;
+  color: white;
 }
 
 div.content-wrap {
@@ -69,6 +73,12 @@ div.content-wrap {
   object-fit: contain;
 }
 
+
+
 iframe {
   width: 100%
+}
+
+video {
+  border-radius: 50%;
 }
