@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     end
 
     def update
+        byebug
         this_user = find_user
         this_user.update!(user_params)
         render json: this_user, status: :ok
