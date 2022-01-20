@@ -25,7 +25,6 @@ function App() {
 
   return (
     <> 
-    
     <BrowserRouter>
       <NavBar user={user} setUser={setUser} setJournals={setJournals} />
           <Routes>
@@ -36,7 +35,6 @@ function App() {
             <Route path="/community" element={<Community user={user} myJournals={myJournals} setJournals={setJournals}/>} />
             <Route path="/archetypes" element={<Archetypes user={user} myJournals={myJournals} setJournals={setJournals}/>} />
             <Route path="/herosjourney" element={<HerosJourney user={user} myJournals={myJournals} setJournals={setJournals}/>} />
-            
           </Routes>
       </BrowserRouter>
     </>

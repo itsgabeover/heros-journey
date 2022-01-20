@@ -30,14 +30,6 @@ function Home({ user }) {
       return (
       <div className="content-wrap">
         <Header user={user.first_name}/>
-        <div className="ted-video">
-          <iframe 
-              src="https://embed.ted.com/talks/matthew_winkler_what_makes_a_hero" 
-              frameBorder="0" 
-              scrolling="no" 
-              allowFullScreen>
-          </iframe>
-        </div>
         <form onSubmit={handleSubmit} className="add-journal-form">
           <label>Title </label>
           <input type="text" name="title" className="add-event-form-input" placeholder="Name..." />
