@@ -30,7 +30,7 @@ function Login({ setUser, setJournals }) {
   }
 
   return (
-    <div className="content">
+    <div className="content-wrap">
       <form className="login" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label htmlFor="username">Username</label>

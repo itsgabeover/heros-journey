@@ -34,9 +34,9 @@ function NavBar({ user, setUser, setJournals }) {
             <a className="item" href="/">Home</a>
             <a className="item" href="/signup">Signup</a>
             <a className="item" href="/login">Login</a>
-            <a className="item" href="/login">The Hero's Journey</a>
-            <a className="item" href="/login">Jungian Archetypes</a>
-            <a className="item" href="/login">Community</a>
+            <a className="item" href="/herosjourney">The Hero's Journey</a>
+            <a className="item" href="/archetypes">Jungian Archetypes</a>
+            <a className="item" href="/community">Community</a>
             <a className="item" href="/">My Journal</a>
             <a className="item" href="/me">My Profile</a>
           </div>
@@ -53,12 +53,9 @@ function NavBar({ user, setUser, setJournals }) {
               <a className="item" href="/">Home</a>
               <a className="item" href="/signup">Signup</a>
               <a className="item" href="/login">Login</a>
-              <a className="item" href="/login">The Hero's Journey</a>
-              <a className="item" href="/login">Jungian Archetypes</a>
-              <a className="item" href="/login">Community</a>
-              <a className="item" href="/login">Community</a>
-              <a className="item" href="/login">Community</a>
-              <a className="item" href="/login">Community</a> 
+              <a className="item" href="/herosjourney">The Hero's Journey</a>
+              <a className="item" href="/archetypes">Jungian Archetypes</a>
+              <a className="item" href="/community">Community</a>
             </div>
         )}
     </>

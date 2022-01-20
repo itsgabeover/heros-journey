@@ -1,10 +1,10 @@
 
-function JungianArchetypes() {
+function HerosJourney() {
     return (
-        <div>
-            Learn about Jungian Archetypes Here:    
-        </div>
+      <div className="content-wrap">
+        <p>Here is my 12 stages of the hero's journey info page</p>
+      </div>
     )
   }
   
-  export default JungianArchetypes;
+  export default HerosJourney;

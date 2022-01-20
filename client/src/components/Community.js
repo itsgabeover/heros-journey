@@ -1,7 +1,7 @@
 
 function Community() {
     return (
-      <div className="content">
+      <div className="content-wrap">
         <p>Here is my community page</p>
       </div>
     )

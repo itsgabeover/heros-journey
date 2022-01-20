@@ -35,7 +35,7 @@ function UserProfile({ user, myJournals, setJournals }) {
       if (myJournals) {
         return myJournals.map(journal => {
             return (
-                <div className="content">
+                <div className="content-wrap">
                     <h3>
                         {journal.title}
                     </h3>

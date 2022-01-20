@@ -30,7 +30,7 @@ function SignUp({ setUser }) {
   }
 
   return (
-    <div className="content">
+    <div className="content-wrap">
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <label htmlFor="username">Username</label>
