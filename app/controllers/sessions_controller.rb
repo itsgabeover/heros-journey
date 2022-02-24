@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :user_data_not_found
+
   
   def show
     current_user = User.find(session[:user_id])
@@ -8,7 +9,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(username: params[:username])
-    if user&.authenticate(params[:password]) 
+    if user&.authenticate(params[:password]) #shorthand for: if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       render json: user, status: :ok
     else

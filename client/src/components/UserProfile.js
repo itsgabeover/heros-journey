@@ -4,7 +4,8 @@ function UserProfile({ user, myJournals, setJournals }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/editprofile", {
+        console.log(user.id)
+        fetch(`/editprofile/${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -20,16 +21,6 @@ function UserProfile({ user, myJournals, setJournals }) {
       }
    
 
-    // useEffect(() => {
-
-    //   fetch("/myJournals")
-    //   .then(r => r.json())
-    //   .then(journals => {
-    //     setJournals(journals)
-    //     console.log(journals)
-    //   })
-        
-    // }, [])
 
     function renderJournals(){
       if (myJournals) {
@@ -56,7 +47,7 @@ function UserProfile({ user, myJournals, setJournals }) {
     
     return (
 
-      <div className="content">
+      <div className="content-wrap">
         <div>
           <form onSubmit={handleSubmit}>
             <h1>Edit User Settings</h1>
@@ -71,7 +62,7 @@ function UserProfile({ user, myJournals, setJournals }) {
             <input type="text" name="first-name"  placeholder={user.first_name} />
             <label>Last Name </label>
             <input type="text" name="last-name"  placeholder={user.last_name} />
-            <label>Nickname </label>'
+            <label>Nickname</label>
             <input type="text" name="nickname"  placeholder={user.nickname} />
             <label>Email</label>
             <input type="text" name="email"  placeholder={user.email} />

@@ -6,8 +6,8 @@ class UsersController < ApplicationController
     end
 
     def show
-        render json: find_user, serializer: UserSerializer, status: :ok
-    end
+        render json: @current_user
+      end
     
     def create
         new_user = User.create!(user_params)

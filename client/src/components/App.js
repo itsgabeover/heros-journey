@@ -31,7 +31,7 @@ function App() {
             <Route path="/" element={<Home user={user}/>} />
             <Route path="/signup" element={<SignUp setUser={setUser}/>} />
             <Route path="/login" element={<Login setUser={setUser} myJournals={myJournals} setJournals={setJournals} />} />
-            <Route path="/me" element={<UserProfile user={user} myJournals={myJournals} setJournals={setJournals}/>} />
+            <Route path="/myprofile" element={<UserProfile user={user} myJournals={myJournals} setJournals={setJournals}/>} />
             <Route path="/community" element={<Community user={user} myJournals={myJournals} setJournals={setJournals}/>} />
             <Route path="/archetypes" element={<Archetypes user={user} myJournals={myJournals} setJournals={setJournals}/>} />
             <Route path="/herosjourney" element={<HerosJourney user={user} myJournals={myJournals} setJournals={setJournals}/>} />

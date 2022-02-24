@@ -32,13 +32,10 @@ function NavBar({ user, setUser, setJournals }) {
                 muted='true'
             /> 
             <a className="item" href="/">Home</a>
-            <a className="item" href="/signup">Signup</a>
-            <a className="item" href="/login">Login</a>
             <a className="item" href="/herosjourney">The Hero's Journey</a>
             <a className="item" href="/archetypes">Jungian Archetypes</a>
             <a className="item" href="/community">Community</a>
-            <a className="item" href="/">My Journal</a>
-            <a className="item" href="/me">My Profile</a>
+            <a className="item" href="/myprofile">My Profile</a>
           </div>
         ) : (
           <div className="sidebar">

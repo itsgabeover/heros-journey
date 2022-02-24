@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   get "/myJournals", to: "journals#my_journals"
 
-  patch "/editprofile", to: "users#update"
+  patch "/editprofile/:id", to: "users#update"
   
 end
