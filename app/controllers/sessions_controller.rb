@@ -1,11 +1,7 @@
 class SessionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :user_data_not_found
-
   
-  def show
-    current_user = User.find(session[:user_id])
-    render json: current_user, serializer: UserSerializer, status: :ok
-  end
+  skip_before_action :authorize, only: :create
 
   def create
     user = User.find_by(username: params[:username])

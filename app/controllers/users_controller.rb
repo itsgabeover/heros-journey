@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with: :user_data_invalid
-
     def index
         render json: User.all, status: :ok
     end
@@ -38,7 +36,4 @@ class UsersController < ApplicationController
         params.permit(:username, :password, :password_confirmation, :first_name, :last_name, :email, :archetype, :nickname)
     end
 
-    def user_data_invalid(error_hash)
-        render json: { errors: error_hash.record.errors.full_messages }, status: :unprocessable_entity
-    end
 end

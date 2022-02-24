@@ -20,12 +20,6 @@ function Login({ setUser, setJournals }) {
         r.json().then((user) => setUser(user));
       }
     });
-    fetch("/myJournals")
-      .then(r => r.json())
-      .then(journals => {
-        setJournals(journals)
-        console.log(journals)
-      })
     navigate('/');
   }
 

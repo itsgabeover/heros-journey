@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  get "/home", to: "sessions#show"
 
   post "/signup", to: "users#create"
+  get "/me", to: "users#show"
 
   post "/newJournalEntry", to: "journals#create"
 

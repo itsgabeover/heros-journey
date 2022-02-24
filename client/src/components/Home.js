@@ -29,7 +29,7 @@ function Home({ user }) {
   }
       return (
       <div className="content-wrap">
-        <Header user={user.first_name}/>
+        <Header user={user}/>
         <form onSubmit={handleSubmit} className="add-journal-form">
           <label>Title </label>
           <input type="text" name="title" className="add-event-form-input" placeholder="Name..." />

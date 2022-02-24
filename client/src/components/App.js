@@ -13,15 +13,15 @@ import HerosJourney from "./HerosJourney";
 function App() {
   const [user, setUser] = useState("");
   const [myJournals, setJournals] = useState([]);
-
-  // useEffect(() => {
-  //   // auto-login
-  //   fetch("/me").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, []);
+  
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
 
   return (
     <> 
