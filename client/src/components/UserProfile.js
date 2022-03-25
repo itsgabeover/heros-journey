@@ -1,32 +1,36 @@
 import { useEffect, useState } from "react";
 
-function UserProfile({ user, myJournals, setJournals }) {
+function UserProfile({ user }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(user.id)
         fetch(`/editprofile/${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-
-          }),
-        }).then((r) => {
-          if (r.ok) {
-            r.json().then((user) => console.log(user));
-          }
-        });
+            username: e.target.username.value,
+            first_name: e.target.fname.value,
+            last_name: e.target.lname.value,
+            nickname: e.target.nickname.value,
+            email: e.target.email.value,
+            archetype: e.target.archetype.value
+          })
+        }).then(response => response.json())
+        .then(json => console.log(json))
       }
    
 
 
     function renderJournals(){
-      if (myJournals) {
-        return myJournals.map(journal => {
+      if (user.journals) {
+         console.log(user.journals.reverse())
+         const journalsArray = user.journals.reverse();
+         console.log(journalsArray.reverse())
+        return journalsArray.map(journal => {
             return (
-                <div className="content-wrap">
+                <div className="content-wrap">                                  
                     <h3>
                         {journal.title}
                     </h3>
@@ -40,7 +44,7 @@ function UserProfile({ user, myJournals, setJournals }) {
             )
         })
         } else {
-          return <p>Begin your story...</p>
+          return <p>Begin writing your story...</p>
         }
        } 
         
@@ -54,14 +58,14 @@ function UserProfile({ user, myJournals, setJournals }) {
             <label htmlFor="username">Username</label>
             <input
               type="text"
-              id="username"
+              name="username"
               autoComplete="off"
               placeholder={user.username}
             />
             <label>First Name </label>
-            <input type="text" name="first-name"  placeholder={user.first_name} />
+            <input type="text" name="fname"  placeholder={user.first_name} />
             <label>Last Name </label>
-            <input type="text" name="last-name"  placeholder={user.last_name} />
+            <input type="text" name="lname"  placeholder={user.last_name} />
             <label>Nickname</label>
             <input type="text" name="nickname"  placeholder={user.nickname} />
             <label>Email</label>

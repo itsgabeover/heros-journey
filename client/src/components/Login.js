@@ -14,8 +14,11 @@ function Login({ setUser, setJournals }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
-    }).then((r) => {
+      body: JSON.stringify({ 
+        username, 
+        password 
+      }),
+      }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
