@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_12_08_215055) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "event_attendees", force: :cascade do |t|
     t.integer "user_id"
     t.integer "event_id"
@@ -20,33 +23,33 @@ ActiveRecord::Schema.define(version: 2021_12_08_215055) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "date"
-    t.string "time"
-    t.string "timezone"
+    t.text "name"
+    t.text "description"
+    t.text "date"
+    t.text "time"
+    t.text "timezone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
   end
 
   create_table "journals", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
-    t.string "tags"
+    t.text "title"
+    t.text "body"
+    t.text "tags"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "nickname"
-    t.string "email"
-    t.string "archetype"
+    t.text "username"
+    t.text "password_digest"
+    t.text "first_name"
+    t.text "last_name"
+    t.text "nickname"
+    t.text "email"
+    t.text "archetype"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
